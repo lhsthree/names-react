@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AddUser from './AddUser';
+import UserLIst from './UserList'
 
 
 
@@ -25,7 +26,7 @@ createContact = user => {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <AddUser users={this.state.users} onAddUser={this.createContact} />
-       
+       <UserLIst users={this.state.users} />
       </div>
     );
   }

@@ -11,7 +11,7 @@ class AddUser extends Component {
 		userExists: false,
 	};
 
-	conactExists = currUsername => {
+	contactExists = currUsername => {
 		const users = this.props.users;
 		for (let user of users) {
 			if (user.username ===currUsername) {
@@ -20,6 +20,7 @@ class AddUser extends Component {
 		}
 		return false;
 	};
+
 	handleSubmit = event => {
 		event.preventDefault();
 		const userExists = this.contactExists(this.state.user.username);
